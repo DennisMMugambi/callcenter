@@ -48,7 +48,7 @@ public class ServiceHistoryFragment extends Fragment {
 
             @Override
             protected void populateViewHolder(ServiceHistoryFragment.MyViewHolder myViewHolder, ServiceHistoryPojo serviceHistoryPojo, int i) {
-                myViewHolder.setupViews(serviceHistoryPojo.getTechnician_name(), serviceHistoryPojo.getDateServiced());
+                myViewHolder.setupViews(serviceHistoryPojo.getTechnician_name(), serviceHistoryPojo.getDateServiced(), serviceHistoryPojo.getCompanyName(), serviceHistoryPojo.getService_description());
             }
         };
         mRecyclerView.setAdapter(adapter);
@@ -64,13 +64,17 @@ public class ServiceHistoryFragment extends Fragment {
             mView = itemView;
 
         }
-        void setupViews(String technicianName, String Date){
-            TextView tName = (TextView) mView.findViewById(R.id.tName);
-            TextView serviceDate = (TextView) mView.findViewById(R.id.date);
+        void setupViews(String technicianName, String Date, String companyName, String serviceDescription){
+            TextView tName = (TextView) mView.findViewById(R.id.name);
+            TextView serviceDate = (TextView) mView.findViewById(R.id.dateServiced);
+            TextView company_name = (TextView) mView.findViewById(R.id.companyName);
+            TextView service_description = (TextView) mView.findViewById(R.id.serviceDescription);
+
 
             tName.setText(technicianName);
             serviceDate.setText(Date);
-
+            company_name.setText(companyName);
+            service_description.setText(serviceDescription);
         }
     }
 }

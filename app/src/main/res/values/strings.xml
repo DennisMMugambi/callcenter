@@ -90,4 +90,7 @@
     <string name="new_active_request">New Active Request</string>
     <string name="click_to_view_request">Clickto view active requests</string>
     <string name="click_to_view_requests">click to view</string>
+    <string name="reply">REPLY</string>
+    <string name="chat_with_technicians">CHAT ROOM</string>
+    <string name="No_requests">There Are Currently No Active Requests</string>
 </resources>

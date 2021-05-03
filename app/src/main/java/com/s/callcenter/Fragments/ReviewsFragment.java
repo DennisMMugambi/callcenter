@@ -52,7 +52,7 @@ public class ReviewsFragment extends Fragment {
 
             @Override
             protected void populateViewHolder(ReviewsFragment.MyViewHolder myViewHolder, FaultyPojo faultyPojo, int i) {
-                myViewHolder.setupViews(faultyPojo.getCompanyName(), faultyPojo.getFault());
+                myViewHolder.setupViews(faultyPojo.getCompanyName(), faultyPojo.getFault(), faultyPojo.getDate());
             }
         };
         mRecyclerView.setAdapter(adapter);
@@ -68,13 +68,15 @@ public class ReviewsFragment extends Fragment {
             mView = itemView;
 
         }
-        void setupViews(String Cname, String faultz){
+        void setupViews(String Cname, String faultz, String date){
             TextView companyName = (TextView) mView.findViewById(R.id.buildingName);
             TextView fault = (TextView) mView.findViewById(R.id.fault);
+            TextView time_stamp = (TextView) mView.findViewById(R.id.timestamp_tv);
 
 
            companyName.setText(Cname);
            fault.setText(faultz);
+           time_stamp.setText(date);
 
         }
     }

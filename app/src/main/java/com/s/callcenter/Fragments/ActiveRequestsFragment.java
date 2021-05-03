@@ -27,12 +27,15 @@ public class ActiveRequestsFragment extends Fragment {
     private DatabaseReference mRef;
     private RecyclerView mRecyclerView;
     private static String tNumber, pNumber;
+    private static TextView no_requests_tv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_active_requests, container, false);
         mRef = FirebaseDatabase.getInstance().getReference().child("active_requests");
+        no_requests_tv = root.findViewById(R.id.no_requests);
+        no_requests_tv.setVisibility(View.VISIBLE);
         mRecyclerView = (RecyclerView) root.findViewById(R.id.active_requests_rv);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return root;
@@ -111,6 +114,7 @@ public class ActiveRequestsFragment extends Fragment {
             pNumber = passengerNumber;
             tNumber = technicianNumber;
 
+            no_requests_tv.setVisibility(View.INVISIBLE);
             passengerName.setText(pname);
             techName.setText(tname);
             passNumber.setText(passengerNumber);

@@ -8,26 +8,98 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardBackgroundColor="@color/card_grey"
         card_view:cardCornerRadius="10dp"
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_margin="8dp"
-            android:id="@+id/buildingName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
-            android:layout_margin="8dp"
-            android:id="@+id/fault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.99999">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_card_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:padding="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/buildingName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed-medium" />
+
+                    <TextView
+                        android:layout_margin="4dp"
+                        android:id="@+id/fault"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+                    </ScrollView>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timestamp_tv"
+                        android:textColor="@android:color/holo_red_light"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chat_with_technician"
+                        android:background="@color/colorPrimary"
+                        android:layout_below="@id/timestamp_tv"
+                        android:text="@string/reply"
+                        android:layout_alignParentEnd="true"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/confirm_repair"
+                        android:background="@color/colorPrimary"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/timestamp_tv"
+                        android:text="@string/chat_with_technicians"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

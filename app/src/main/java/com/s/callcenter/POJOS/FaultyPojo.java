@@ -1,11 +1,12 @@
 package com.s.callcenter.POJOS;
 
 public class FaultyPojo {
-    private String companyName, fault;
+    private String companyName, fault, date;
 
-    public FaultyPojo(String companyName, String fault) {
+    public FaultyPojo(String companyName, String fault, String date) {
         this.companyName = companyName;
         this.fault = fault;
+        this.date = date;
     }
 
 
@@ -26,5 +27,13 @@ public class FaultyPojo {
 
     public void setFaulty(String fault) {
         this.fault = fault;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

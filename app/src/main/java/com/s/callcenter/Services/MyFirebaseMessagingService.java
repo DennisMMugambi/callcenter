@@ -1,7 +1,23 @@
 package com.s.callcenter.Services;
 
-public class MyFirebaseMessagingService {
-    private static final String TAG = "FirebaseMessagingServce";
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+import com.s.callcenter.Fragments.ReviewsFragment;
+import com.s.callcenter.R;
+
+public class MyFirebaseMessagingService extends FirebaseMessagingService {
+    private static final String TAG = "MyFirebaseMessagingService";
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
@@ -20,7 +36,7 @@ public class MyFirebaseMessagingService {
     }
 
     private void sendLocalNotification(String notificationTitle, String notificationBody) {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, ReviewsFragment.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
@@ -28,7 +44,7 @@ public class MyFirebaseMessagingService {
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setAutoCancel(true)   //Automatically delete the notification
-                .setSmallIcon(R.drawable.sigla4) //Notification icon
+                .setSmallIcon(R.drawable.ic_baseline_warning_24) //Notification icon
                 .setContentIntent(pendingIntent)
                 .setContentTitle(notificationTitle)
                 .setContentText(notificationBody)

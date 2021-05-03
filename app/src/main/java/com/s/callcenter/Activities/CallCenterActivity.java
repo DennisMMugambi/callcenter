@@ -23,6 +23,7 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.s.callcenter.Fragments.ActiveRequestsFragment;
 import com.s.callcenter.Fragments.ReviewsFragment;
 import com.s.callcenter.Fragments.ServiceHistoryFragment;
@@ -71,12 +72,13 @@ public class CallCenterActivity extends AppCompatActivity {
         //mPoweredIntentFilter.addAction(Intent.ACTION_SCREEN_OFF);
         //mPoweredIntentFilter.addAction(Intent.ACTION_SCREEN_ON);
 
-        Intent intent = new Intent(this, NotificationService.class);
-        startService(intent);
+       // Intent intent = new Intent(this, NotificationService.class);
+        //startService(intent);
 
 
 
         // This will display an Up icon (<-), we will replace it with hamburger later
+        FirebaseMessaging.getInstance().subscribeToTopic("pushNotifications");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
