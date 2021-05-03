@@ -1,5 +1,6 @@
 package com.s.callcenter.Services;
 
+<<<<<<< HEAD
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -54,4 +55,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         notificationManager.notify(1234, notificationBuilder.build());
     }
+=======
+public class MyFirebaseMessagingService {
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
 }

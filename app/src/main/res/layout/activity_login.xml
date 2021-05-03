@@ -26,7 +26,11 @@
         android:id="@+id/iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="80dp"
+=======
+        android:layout_marginTop="40dp"
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +103,11 @@
         android:id="@+id/btn_phone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="56dp"
+=======
+        android:layout_marginTop="16dp"
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
         android:background="@drawable/btn_bg"
         android:text="@string/phone_sign_in"
         android:textColor="@color/login_form_detail"
@@ -119,14 +127,22 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@+id/bottom_line"
+<<<<<<< HEAD
         android:layout_marginTop="16dp"/>
+=======
+        android:layout_marginTop="6dp"/>
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
 
 
     <View
         android:id="@+id/bottom_line"
         android:layout_width="0dp"
         android:layout_height="1dp"
+<<<<<<< HEAD
         android:layout_marginBottom="50dp"
+=======
+        android:layout_marginBottom="40dp"
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
         android:background="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

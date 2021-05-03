@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/no_requests"
         android:layout_width="match_parent"
@@ -21,4 +22,6 @@
         android:visibility="invisible"
         android:text="@string/No_requests"/>
 
+=======
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
 </FrameLayout>

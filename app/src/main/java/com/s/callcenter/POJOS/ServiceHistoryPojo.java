@@ -45,4 +45,8 @@ public class ServiceHistoryPojo {
     public void setTechnician_name(String technician_name) {
         this.technician_name = technician_name;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae

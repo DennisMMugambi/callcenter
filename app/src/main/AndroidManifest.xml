@@ -18,7 +18,10 @@
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.ForgotPassActivity" />
         <activity android:name=".Activities.SplashScreenActivity"
+<<<<<<< HEAD
             android:screenOrientation="portrait"
+=======
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
             android:theme="@style/SplashTheme"
             android:noHistory="true">
             <intent-filter>
@@ -35,6 +38,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTop"/>
 
+<<<<<<< HEAD
         <service
             android:name=".Services.MyFirebaseMessagingService">
             <intent-filter>
@@ -42,6 +46,8 @@
             </intent-filter>
         </service>
 
+=======
+>>>>>>> cb40898315628612b6527317e72aed1cb805bbae
     </application>
 
 </manifest>
